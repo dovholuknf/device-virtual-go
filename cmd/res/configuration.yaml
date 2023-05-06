@@ -14,8 +14,8 @@ Service:
   Host: core-metadata.edgex.ziti
   Port: 80
   StartupMsg: device virtual started
-  ListenMode: "zerotrust"
   ListenOptions:
+    ListenMode: "zerotrust"
     OpenZitiController: "ec2-3-134-108-218.us-east-2.compute.amazonaws.com:8441"
     OpenZitiServiceName: "edgex.device-virtual"
 
