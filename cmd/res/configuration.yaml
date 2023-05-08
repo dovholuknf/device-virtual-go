@@ -11,9 +11,13 @@ Writable:
 #   Host: localhost # uncomment when running from command-line in hybrid mode
 
 Service:
-  Host: localhost
-  Port: 59900
+  Host: core-metadata.edgex.ziti
+  Port: 80
   StartupMsg: device virtual started
+  SecurityOptions:
+    ListenMode: "zerotrust"
+    OpenZitiController: "ec2-3-134-108-218.us-east-2.compute.amazonaws.com:8441"
+    OpenZitiServiceName: "edgex.device-virtual"
 
 MessageBus:
 #  Host: localhost # uncomment when running from command-line in hybrid mode
@@ -24,3 +28,14 @@ Device:
   # These have common values (currently), but must be here for service local env overrides to apply when customized
   ProfilesDir: "./res/profiles"
   DevicesDir: "./res/devices"
+
+Clients:
+  core-metadata:
+    Protocol: http
+    Host: core-metadata.edgex.ziti
+    #Port: 59881
+    Port: 80
+    SecurityOptions:
+      Mode: "zerotrust"
+      OpenZitiController: "ec2-3-134-108-218.us-east-2.compute.amazonaws.com:8441"
+      OpenZitiServiceName: "core-metadata"
