@@ -1,6 +1,6 @@
 MaxEventSize: 0 # value 0 unlimit the maximum event size that can be sent to message bus or core-data
 Writable:
-  LogLevel: INFO
+  LogLevel: DEBUG
 
 # # uncomment when running from command-line in hybrid mode with -cp -o flags
 #Registry:
