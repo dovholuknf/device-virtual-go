@@ -11,7 +11,7 @@ Writable:
 #   Host: localhost # uncomment when running from command-line in hybrid mode
 
 Service:
-  Host: core-metadata.edgex.ziti
+  Host: device-virtual.edgex.ziti
   Port: 80
   StartupMsg: device virtual started
   SecurityOptions:
