@@ -7,7 +7,7 @@ Service:
   Port: 80
   StartupMsg: device virtual started
   SecurityOptions:
-    ListenMode: "zerotrust"
+    Mode: "zerotrust"
     OpenZitiController: "openziti:1280"
     OpenZitiServiceName: "edgex.device-virtual"
 
