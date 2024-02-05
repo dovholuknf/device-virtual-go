@@ -6,6 +6,10 @@ Service:
   Host: localhost
   Port: 59900
   StartupMsg: device virtual started
+  SecurityOptions:
+    Mode: ""
+    OpenZitiController: "openziti:1280"
+    OpenZitiServiceName: "edgex.core-command"
 
 MessageBus:
   Optional:
@@ -15,3 +19,15 @@ Device:
   # These have common values (currently), but must be here for service local env overrides to apply when customized
   ProfilesDir: "./res/profiles"
   DevicesDir: "./res/devices"
+
+Clients:
+  core-metadata:
+    Protocol: http
+    Host: core-metadata.edgex.ziti
+    #Port: 59881
+    Port: 80
+    SecurityOptions:
+      Mode: ""
+      OpenZitiController: "openziti:1280"
+      OpenZitiServiceName: "core-metadata"
+      
